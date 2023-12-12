@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export function Register() {
+
+ const [data , setData ] = useState({
+  username:"",
+  email: "",
+  password: ""
+ })
+ console.log(data);
+
+
   return (
     <div>
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -18,6 +27,27 @@ export function Register() {
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <form className="space-y-5" action="#" method="POST">
+        <div>
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Enter Your Name Here....
+            </label>
+            <div className="mt-2">
+              <input
+                onChange={(e)=> setData({...data , username:e.target.value}) }
+                value={data.username}
+                id="name"
+                name="name"
+                type="name"
+                autoComplete="name"
+                required
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+
           <div>
             <label
               htmlFor="email"
@@ -27,6 +57,8 @@ export function Register() {
             </label>
             <div className="mt-2">
               <input
+                onChange={(e)=> setData({...data , email:e.target.value}) }
+                value={data.email}
                 id="email"
                 name="email"
                 type="email"
@@ -48,6 +80,8 @@ export function Register() {
             </div>
             <div className="mt-2">
               <input
+                onChange={(e)=> setData({...data , password:e.target.value}) }
+                value={data.password}
                 id="password"
                 name="password"
                 type="password"

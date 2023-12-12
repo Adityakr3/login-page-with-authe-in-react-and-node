@@ -5,9 +5,12 @@ import DashBoard from './pages/DashBoard';
 import { Register } from './pages/Register';
 import Error from './pages/Error';
 import { Otp } from './pages/Otp';
+import { Header } from './components/Header';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <div className="App">
+     <Header/>
      <Routes>
        <Route path='/' element={<Login/>}/>
        <Route path='/dashboard' element={<DashBoard/>}/>

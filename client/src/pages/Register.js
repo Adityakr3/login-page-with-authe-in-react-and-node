@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-
 export function Register() {
 
  const [data , setData ] = useState({
@@ -9,8 +8,6 @@ export function Register() {
   password: ""
  })
  console.log(data);
-
-
   return (
     <div>
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -47,7 +44,6 @@ export function Register() {
               />
             </div>
           </div>
-
           <div>
             <label
               htmlFor="email"

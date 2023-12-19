@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import style from "../style/UserName.module.css"
 export function Register() {
 
  const [data , setData ] = useState({
@@ -9,8 +10,8 @@ export function Register() {
  })
  console.log(data);
   return (
-    <div>
-    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+    <div className={style.main}>
+    <div id={style.container} className="px-8 py-25">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           className="mx-auto h-16 w-auto"

@@ -38,14 +38,9 @@ export function UserName() {
                 <img src={image} alt="" srcset="" />
             </div>
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                Email address
-              </label>
               <div className="mt-2">
                 <input
+                  placeholder="Enter Your UserName"
                   onChange={(e) => setEmail(e.target.value)}
                   id="email"
                   name="email"

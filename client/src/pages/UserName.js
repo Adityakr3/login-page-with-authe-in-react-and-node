@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-export function Login() {
+import image from "../asset/images/pic.webp"
+import style from "../style/UserName.module.css"
+
+export function UserName() {
   const [email , setEmail] = useState("");
   const SendOtp = (e) => {
     e.preventDefault();
@@ -17,8 +20,8 @@ export function Login() {
   };
 
   return (
-    <div>
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+    <div className={style.main}>
+      <div id={style.container}>
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
@@ -31,6 +34,9 @@ export function Login() {
         </div>
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" action="#" method="POST">
+            <div className={style.avtar}>
+                <img src={image} alt="" srcset="" />
+            </div>
             <div>
               <label
                 htmlFor="email"
@@ -56,7 +62,7 @@ export function Login() {
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Send Otp
+                Submit
               </button>
             </div>
           </form>

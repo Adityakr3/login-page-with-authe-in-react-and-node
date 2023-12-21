@@ -21,8 +21,25 @@ export async function resetPasswordValidation(values){
     return errors
 }
 
+// VALIDATE REGISTER FORM 
+
+export async function registerValidation(values){
+  const errors = usernameVerify({} , values);
+  passwordVerify(errors , values)
+  emailVerify(errors , values)
+}
 
 
+// Email validate 
+
+function emailVerify(error={} ,values){
+  if(!values.email){
+    error.email =Toast.error("Email field can't be empty")
+  }else if (values.email.includes(' ')){
+    error.email= Toast.error("Please enter valid email address...");
+  }
+  return error
+}
 
 
 // password validate

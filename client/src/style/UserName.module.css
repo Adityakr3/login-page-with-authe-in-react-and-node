@@ -24,4 +24,11 @@
     overflow: hidden;
     object-fit: cover;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type='file']{
+    display: none;
 }

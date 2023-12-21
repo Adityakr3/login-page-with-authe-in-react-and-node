@@ -3,10 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import { UserName } from "./pages/UserName";
 import DashBoard from "./pages/DashBoard";
 import { Register } from "./pages/Register";
-import Recovery from "./pages/Recovery";
+import {Recovery} from "./pages/Recovery";
 import { Reset } from "./pages/Reset";
 import PageNotFound from "./pages/PageNotFound";
-import Password from "./pages/Password";
+import {Password} from "./pages/Password";
 import { Header } from "./components/Header";
 import "react-toastify/dist/ReactToastify.css";
 function App() {

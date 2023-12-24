@@ -20,7 +20,7 @@ router.get("/createResetSession").get(controller.createResetSession) // reset al
 
 // put router
 
-router.put("/updateuser").put(controller.updateuser) // use to update profile
-router.put("/resetPassword").put(controller.resetPassword) // use to reset password
+router.put("/updateuser").put() // use to update profile
+router.put("/resetPassword").put() // use to reset password
 
 export default router

@@ -18,9 +18,8 @@ router.get("/generateOTP").get(controller.generateOTP)  // generate otp
 router.get("/verifyOTP").get(controller.verifyOTP)  // verify otp
 router.get("/createResetSession").get(controller.createResetSession) // reset all varibales
 
-// put router
-
-router.put("/updateuser").put() // use to update profile
-router.put("/resetPassword").put() // use to reset password
+// // put router
+// router.put("/updateuser").put() // use to update profile
+// router.put("/resetPassword").put() // use to reset password
 
 export default router

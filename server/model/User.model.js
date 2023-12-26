@@ -16,11 +16,11 @@ export const UserSchema = new mongoose.Schema({
     require: [true, "please provide a email"],
     unique: true,
   },
-  firstName:{ type: String},
-  lastName:{ type: String},
-  mobile:{ type: Number},
-  address:{ type: String},
-  profile:{ type: String},
+  firstName: { type: String },
+  lastName: { type: String },
+  mobile: { type: Number },
+  address: { type: String },
+  profile: { type: String },
 });
 
-export default mongoose.model.Users || mongoose.model('User',UserSchema)
+export default mongoose.model.Users || mongoose.model("User", UserSchema);
